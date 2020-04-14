@@ -1,12 +1,51 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Library</title>
+  <title>Odin's Library</title>
   <meta charset="UTF-8"/>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <table></table>
+     <div class="container">
+      <nav class="navbar navbar-dark bg-dark">
+        <a class="navbar-brand" href="#" >Odin's Library</a>
+      </nav>
+
+      <form class="w-50">
+        <div class="form-group">
+          <label for="book-title">Book Title</label>
+          <input type="text" class="form-control" id="book-title">
+        </div>
+        <div class="form-group">
+          <label for="book-author">Author</label>
+          <input type="text" class="form-control" id="book-author">
+        </div>
+        <div class="form-group">
+          <label for="book-pages">No. of Pages</label>
+          <input type="number" class="form-control" id="book-pages">
+        </div>
+        <div class="form-group form-check">
+          <input type="checkbox" class="form-check-input" id="book-read">
+          <label class="form-check-label" for="book-read">Check if Read</label>
+        </div>
+        <button type="submit" class="btn btn-sm btn-secondary">Add Book</button>
+      </form>
+
+      <table class="table mt-5">
+        <thead class="thead-dark">
+          <tr class="text-center">
+            <th scope="col">Book Title</th>
+            <th scope="col">Author</th>
+            <th scope="col">No. of Pages</th>
+            <th scope="col">Read?</th>
+            <th scope="col">Remove</th>
+          </tr>
+          <tbody id="book-list">
+          </tbody>
+        </thead>
+      </table>
+    </div>
     <script src="js/main.js"></script>
 </body>
 </html>
